@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bevy Domino Demo</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<script type="module">
+  import init from './bevy-domino-demo.js';
+
+  init().catch((error) => {
+    if (!error.message.startsWith("Using exceptions for control flow,")) {
+      throw error;
+    }
+  });
+</script>
+</body>
+</html>
